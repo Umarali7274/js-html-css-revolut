@@ -8,13 +8,6 @@
     width: 70%;
     margin: 0 auto;
 }
-li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 35px;
-    font-weight: 600;
-    cursor: pointer;
-}
 a{
     text-decoration: none;
     color: lightslategray;
@@ -28,6 +21,14 @@ a:hover{
     display: flex;
     height: 100px;
     justify-content: space-between;  
+}
+#header .nav-left li,
+#header .nav-right > ul > li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 35px;
+    font-weight: 600;
+    position: relative;
 }
 /* NAV LEFT */
 #header .nav-left,
@@ -51,7 +52,7 @@ a:hover{
     cursor: pointer;
     font-weight: 600;
 }
-#header .nav-right li:last-child{
+#header .nav-right > ul > li:last-child{
     margin-left: 10px;
 }
 #header .nav-right li:last-child button{
@@ -61,4 +62,22 @@ a:hover{
 /* DROPDOWNS */
 .dropdown{
     position: absolute;
+    top: 50px;
+    left: 0;
+    border: 1px solid black;
+    display: none;
+}
+.dropdown ul{
+    padding: 30px;
+    list-style: none;
+}
+#header .nav-right > ul > li span{
+    cursor: pointer;
+    color: lightslategray;
+}
+#header .nav-right > ul > li span:hover{
+    color: rgb(39, 39, 41);
+}
+.js-flex{
+    display: flex;
 }
