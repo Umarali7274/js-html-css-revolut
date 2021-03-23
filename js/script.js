@@ -1,7 +1,9 @@
-// selected dropdown shows - other open dropdown hide
-function openDrodown(){
+// dropdown shows
+function openThisDrodown(){
 
+    // if other dropdown's open -> collapse
     $('.dropdown').removeClass('js-flex');
+    // hovered dropdown shows
     $(this).find('.dropdown').addClass('js-flex')
     
 
@@ -15,7 +17,7 @@ function removeDropdown(){
 function init(){
 
     // dropdown on hover
-    $('#features, #plans, #about, #help').hover(openDrodown)
+    $('#features, #plans, #about, #help').hover(openThisDrodown)
     // elsewhere click event
     $(document).click(removeDropdown)
 };
